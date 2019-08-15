@@ -1,4 +1,4 @@
-name: 'Bump Versions'
+name: 'Pypi'
 description: 'A GitHub Action to easily bump version files'
 author: 'Tommaso De Rossi'
 branding:
