@@ -1,5 +1,5 @@
 name: 'Deploy Pypi'
-description: 'A GitHub Action to easily bump version files'
+description: 'A GitHub Action to deploy python packages to pypi'
 author: 'Tommaso De Rossi'
 branding:
   icon: 'upload-cloud'
