@@ -1,12 +1,16 @@
-# Bump version
-Bump the version number in the provided `version_file`.
-Bumps version numbers found after lines containing `[bump]`.
+# Pypi
+Deploy package to pypi.
 
 
 ## Usage:
 ```yaml
-- name: Bump version
-  uses: remorses/bump-version
+- name: Deploy package
+  uses: remorses/pypi
   with:
-    version_file: ./VERSION
+    setupfile: ./setup.py
+    username: ${{  secrets.pypi_username }}
+    password: ${{ secrets.pypi_password }}
+    distributions:
+      - sdist
+      - bdist_wheel
 ```
