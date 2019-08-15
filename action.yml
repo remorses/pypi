@@ -6,20 +6,23 @@ branding:
   color: 'purple'
 inputs: 
   setup_file:
+    description: setup file
     default: ./setup.py
   username:
+    description: username
     required: true
   password:
+    description: password
     required: true
   # distributions:
   #   - sdist
   #   - bdist_wheel
-env:
-  PLUGIN_SETUPFILE: ${{ inputs.setup_file }}
-  PLUGIN_USERNAME: ${{ inputs.username }}
-  PLUGIN_PASSWORD: ${{ inputs.password }}
   # PLUGIN_DISTRIBUTIONS:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env:
+    PLUGIN_SETUPFILE: ${{ inputs.setup_file }}
+    PLUGIN_USERNAME: ${{ inputs.username }}
+    PLUGIN_PASSWORD: ${{ inputs.password }}
 
