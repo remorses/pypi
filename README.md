@@ -8,9 +8,7 @@ Deploy package to pypi.
   uses: remorses/pypi@master
   with:
     setupfile: ./setup.py
-    username: ${{  secrets.pypi_username }}
+    username: ${{ secrets.pypi_username }}
     password: ${{ secrets.pypi_password }}
-    distributions:
-      - sdist
-      - bdist_wheel
+
 ```
